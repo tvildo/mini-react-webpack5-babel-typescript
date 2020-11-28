@@ -7,7 +7,7 @@ const htmlPlugin = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-  entry: path.resolve(__dirname, "./src/index.tsx"),
+  entry: path.resolve(__dirname, "./src/index"),
   module: {
     rules: [
       {
@@ -24,7 +24,7 @@ module.exports = {
   },
   plugins: [htmlPlugin],
   resolve: {
-    extensions: ["*", ".js", ".jsx"],
+    extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],
   },
   output: {
     path: distFolder,
